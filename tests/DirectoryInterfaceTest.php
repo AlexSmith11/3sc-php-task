@@ -2,6 +2,8 @@
 
 namespace cubeTest\tests;
 
+require_once __DIR__ . '/../src/DirectoryInterface.php';
+
 use PHPUnit\Framework\TestCase;
 use src\DirectoryInterface;
 

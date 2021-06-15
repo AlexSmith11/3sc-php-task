@@ -2,6 +2,8 @@
 
 namespace Tests;
 
+require_once __DIR__ . '/../src/FileInterface.php';
+
 use PHPUnit\Framework\TestCase;
 use src\FileInterface;
 
