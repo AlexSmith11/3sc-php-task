@@ -1,6 +1,6 @@
 <?php
 
-namespace Tsc\CatStorageSystem;
+namespace src;
 
 interface FileSystemInterface
 {
