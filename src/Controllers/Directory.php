@@ -32,6 +32,7 @@ class Directory implements DirectoryInterface
     public function getPath()
     {
         // TODO: Implement getPath() method.
+        return dirname(__FILE__);
     }
 
     public function setPath($path)

@@ -10,7 +10,6 @@ use src\FileSystemInterface;
 
 class FileSystem implements FileSystemInterface
 {
-
     public function createFile(FileInterface $file, DirectoryInterface $parent)
     {
         // TODO: Implement createFile() method.
@@ -39,6 +38,8 @@ class FileSystem implements FileSystemInterface
     public function createDirectory(DirectoryInterface $directory, DirectoryInterface $parent)
     {
         // TODO: Implement createDirectory() method.
+        $path = $parent->getPath() . "\\" . $directory->getName();
+        mkdir($path);
     }
 
     public function deleteDirectory(DirectoryInterface $directory)
