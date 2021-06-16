@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Controllers;
+namespace Models;
 
 
 use src\DirectoryInterface;
@@ -70,6 +70,7 @@ class FileSystem implements FileSystemInterface
     public function getDirectories(DirectoryInterface $directory)
     {
         // TODO: Implement getDirectories() method.
+        $directories = glob(__FILE__ . '/*' , GLOB_ONLYDIR);
     }
 
     public function getFiles(DirectoryInterface $directory)

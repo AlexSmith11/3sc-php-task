@@ -8,7 +8,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "Controllers\\": "src/Controllers",
+            "Models\\": "src/Models",
             "Tests\\": "tests"
         }
     },

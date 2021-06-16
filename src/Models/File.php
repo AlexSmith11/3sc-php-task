@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Controllers;
+namespace Models;
 
 use DateTimeInterface;
 use DateTime;
@@ -10,6 +10,9 @@ use src\FileInterface;
 
 class File implements FileInterface
 {
+    private $name = "";
+    private $size = 0;
+
     public function getName()
     {
         echo "hi";

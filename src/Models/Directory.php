@@ -1,17 +1,22 @@
 <?php
 
 
-namespace Controllers;
+namespace Models;
 
 use DateTimeInterface;
 use src\DirectoryInterface;
 
 class Directory implements DirectoryInterface
 {
+    public function testing() {
+        $path = dirname( __FILE__, $levels = 3);
+        echo $path;
+    }
 
     public function getName()
     {
         // TODO: Implement getName() method.
+        return __FILE__;
     }
 
     public function setName($name)
