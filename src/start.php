@@ -17,24 +17,29 @@ use Models\FileSystem;
 use Models\Directory;
 
 /**
- * We shall treat the 'images' dir as the root directory / parent of the file system.
+ * Read README for overview
+ *
+ * The controllers are static php files because they'd only be static classes anyway.
+ * I honestly am unaware if this is a horrendous idea (I'm gonna say that it is), but this is absolutely one of the main reasons I'd love to work for 3 Sided Cube -
+ * I really want to learn from you guys about OOP code structure/architecture/higher level things.
+ */
+
+/**
+ * We shall treat the 'cubeTest' dir as the ultimate root directory / parent of the file system.
+ * The user can then use createRootDirectory to create a new root next to 'images' & 'src'. all directory's and files will go in here.
  */
 
 $fileSystem = new FileSystem();
 
-/**
- * here we query the user through the CLI and i.e create a new file/directory.
- * - create a new instance of a file & set its properties. then save it.
- *
- * create a way to fetch files/directories - to do this:
- * create a new instance of a file/dir, enter its name in the CLI, get the properties of the file/dir using the name given.
- * TODO: But this creates a new instance - what if we want to rename/modify?
- */
-
+// here we query the user through the CLI and i.e create a new file/directory.
 $str = "what would you like to do? 
 To create a file, enter 'create file'.
-To update a file, enter 'update file'
-...";
+To update a file, enter 'update file'.
+...
+To create a directory, enter 'create dir'.
+To delete a directory and its contents, enter ' delete dir'.
+...
+\n";
 
 echo $str;
 $line = getUserInput();
@@ -44,4 +49,10 @@ switch ($line) {
     case "create file":
         $newFile = createNewFile();
         $fileSystem->createFile($newFile, $newFile->getParentDirectory());
+        break;
+    case "update file":
+        echo "hi";
+        break;
+    default:
+        break;
 }

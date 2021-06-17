@@ -3,6 +3,10 @@
 use Models\Directory;
 use Models\File;
 
+/**
+ * Creates a new file & populates it with the user given inputs
+ * @return File
+ */
 function createNewFile() {
     $newFile = new File();
 
