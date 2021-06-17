@@ -8,12 +8,13 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "Tsc\\CatStorageSystem\\": "src/"
+            "Models\\": "src/Models",
+            "Tests\\": "tests"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tsc\\CatStorageSystem\\Tests\\": "tests/"
+            "Tests\\": "tests/"
         }
     }
 }

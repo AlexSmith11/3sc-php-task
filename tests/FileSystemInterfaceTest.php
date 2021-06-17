@@ -1,8 +1,11 @@
 <?php
 
-namespace Tsc\CatStorageSystem;
+namespace cubeTest\tests;
+
+require_once __DIR__ . '/../src/FileSystemInterface.php';
 
 use PHPUnit\Framework\TestCase;
+use src\FileSystemInterface;
 
 class FileSystemInterfaceTest extends TestCase {
 
