@@ -10,62 +10,66 @@ use src\FileInterface;
 
 class File implements FileInterface
 {
-    private $name = "";
-    private $size = 0;
+    private $fileName = "";
+    private $fileSize = 0;
+    private $fileCreatedTime;
+    private $fileModifiedTime;
+    private $fileParentDir = "";
+    private $filePath = "";
 
     public function getName()
     {
-        echo "hi";
-        // TODO: Implement getName() method.
+        return $this->fileName;
     }
 
     public function setName($name)
     {
-        // TODO: Implement setName() method.
+        $this->fileName = $name;
     }
 
+    // maybe you are building cloud storage/hosting this project and want to set a file size cap
     public function getSize()
     {
-        // TODO: Implement getSize() method.
+        return $this->fileSize;
     }
 
     public function setSize($size)
     {
-        // TODO: Implement setSize() method.
+        $this->fileSize = $size;
     }
 
     public function getCreatedTime()
     {
-        // TODO: Implement getCreatedTime() method.
+        return $this->fileCreatedTime;
     }
 
     public function setCreatedTime(DateTimeInterface $created)
     {
-        // TODO: Implement setCreatedTime() method.
+        $this->fileCreatedTime = $created;
     }
 
     public function getModifiedTime()
     {
-        // TODO: Implement getModifiedTime() method.
+        return $this->fileModifiedTime;
     }
 
     public function setModifiedTime(DateTimeInterface $modified)
     {
-        // TODO: Implement setModifiedTime() method.
+        $this->fileModifiedTime = $modified;
     }
 
     public function getParentDirectory()
     {
-        // TODO: Implement getParentDirectory() method.
+        return $this->fileParentDir;
     }
 
     public function setParentDirectory(DirectoryInterface $parent)
     {
-        // TODO: Implement setParentDirectory() method.
+        $this->fileParentDir = $parent;
     }
 
     public function getPath()
     {
-        // TODO: Implement getPath() method.
+        return $this->filePath;
     }
 }
